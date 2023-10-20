@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="board-container p-2 h-screen w-screen">
+	<div
+		class="board bg-red-100 border border-black w-full h-full flex items-center justify-center text-5xl"
+	>
+		Le Board
+	</div>
+</div>
+
+<style>
+</style>
