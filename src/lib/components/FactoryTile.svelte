@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Tile from './Tile.svelte';
+	import azulStore from '$lib/stores/index';
 </script>
 
 <div class="factory-tile bg-red-300 w-[400px] h-[400px] flex justify-center items-center">
 	<div class="tiles">
-		<Tile color="tomato" />
-		<Tile color="maroon" />
-		<Tile color="hotpink" />
-		<Tile color="aqua" />
+		{#each $azulStore.tiles as tile}
+			<Tile color={tile} />
+		{/each}
 	</div>
 </div>
 

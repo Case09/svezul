@@ -1,5 +1,11 @@
 import { writable } from 'svelte/store';
 
-interface AzulStore {}
+interface AzulStore {
+	tiles: string[];
+}
 
-const azulStore = writable(<AzulStore>{});
+const azulStore = writable(<AzulStore>{
+	tiles: []
+});
+
+export default azulStore;
