@@ -13,7 +13,7 @@
 		const numberOfTiles = 4;
 		let tiles = [];
 		for (let i = 0; i < numberOfTiles; i++) {
-			const idx = Math.floor(Math.random() * 4);
+			const idx = Math.floor(Math.random() * 5);
 			tiles.push(colors[idx]);
 		}
 		$azulStore.tiles = tiles;
