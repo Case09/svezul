@@ -1,4 +1,8 @@
-export const azulColors = {
+export const tiles = ['blue', 'orange', 'red', 'black', 'white'] as const;
+
+export type TileColor = (typeof tiles)[number];
+
+export const azulColors: Record<TileColor, string> = {
 	blue: '#0277ad',
 	orange: '#d19d3a',
 	red: '#d74b42',

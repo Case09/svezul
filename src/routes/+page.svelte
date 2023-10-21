@@ -1,7 +1,6 @@
 <script lang="ts">
+	import { tiles, type TileColor } from '$lib';
 	import FactoryTile from '$lib/components/FactoryTile.svelte';
-	import { azulColors } from '../lib';
-	let colors = Object.values(azulColors);
 	import azulStore from '$lib/stores/index';
 	import { onMount } from 'svelte';
 
@@ -11,12 +10,12 @@
 
 	function randomizeTiles(): void {
 		const numberOfTiles = 4;
-		let tiles = [];
+		let randomTiles: TileColor[] = [];
 		for (let i = 0; i < numberOfTiles; i++) {
 			const idx = Math.floor(Math.random() * 5);
-			tiles.push(colors[idx]);
+			randomTiles.push(tiles[idx]);
 		}
-		$azulStore.tiles = tiles;
+		$azulStore.tiles = randomTiles;
 	}
 </script>
 

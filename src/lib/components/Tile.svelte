@@ -1,9 +1,11 @@
 <script lang="ts">
-	export let color: string;
+	import type { TileColor } from '$lib';
+	import { azulColors } from '$lib';
+	export let tile: TileColor;
 </script>
 
 <div
-	style="background-color: {color}"
+	style="background-color: {azulColors[tile]}"
 	class="tile text-xs text-white h-[50px] w-[50px] flex items-center justify-center"
 >
 	Tile

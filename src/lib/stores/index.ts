@@ -1,7 +1,8 @@
+import type { TileColor } from '$lib';
 import { writable } from 'svelte/store';
 
 interface AzulStore {
-	tiles: string[];
+	tiles: TileColor[];
 }
 
 const azulStore = writable(<AzulStore>{
