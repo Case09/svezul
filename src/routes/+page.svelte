@@ -14,10 +14,8 @@
 
     const [initialTiles, bag] = takeTilesFrom(initialBag);
 
-    $azulStore = {
-      bag,
-      tiles: initialTiles
-    }
+    $azulStore.bag = bag;
+    $azulStore.tiles = initialTiles;
   })
 
   function takeTilesFrom(tiles: TileColor[]): [TileColor[], TileColor[]] {
@@ -25,6 +23,8 @@
     const remaining = drop(tiles, 4);
     return [taken, remaining];
   }
+
+  $: console.log($azulStore);
 </script>
 
 <div class="board-container h-screen w-screen p-2">
