@@ -11,10 +11,7 @@
 <div
 	style="background-color: {currentTile}"
 	on:click={() => pickTile(tile)}
-	class="tile flex h-[50px] w-[50px] items-center justify-center text-xs text-white"
+	class="flex h-[50px] w-[50px] items-center justify-center text-xs text-white"
 >
 	Tile
 </div>
-
-<style>
-</style>

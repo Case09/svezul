@@ -21,15 +21,12 @@
 	$: console.log($azulStore);
 </script>
 
-<div class="board-container h-screen w-screen p-2">
+<div class="h-screen w-screen p-2">
 	{#if $azulStore.bag.length}
 		<h1>Tiles in bag: {$azulStore.bag.length}</h1>
 		<h1>Score: {$azulStore.score}</h1>
 	{/if}
-	<div class="board flex h-full w-full items-center justify-center text-5xl">
+	<div class="flex h-full w-full items-center justify-center text-5xl">
 		<FactoryTile />
 	</div>
 </div>
-
-<style>
-</style>
