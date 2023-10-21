@@ -19,8 +19,8 @@
 	}
 </script>
 
-<div class="board-container p-2 h-screen w-screen">
-	<div class="board w-full h-full flex items-center justify-center text-5xl">
+<div class="board-container h-screen w-screen p-2">
+	<div class="board flex h-full w-full items-center justify-center text-5xl">
 		<FactoryTile />
 	</div>
 </div>

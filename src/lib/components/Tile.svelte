@@ -6,7 +6,7 @@
 
 <div
 	style="background-color: {azulColors[tile]}"
-	class="tile text-xs text-white h-[50px] w-[50px] flex items-center justify-center"
+	class="tile flex h-[50px] w-[50px] items-center justify-center text-xs text-white"
 >
 	Tile
 </div>

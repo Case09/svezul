@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Tile from './Tile.svelte';
 	import azulStore from '$lib/stores/index';
+	import Tile from './Tile.svelte';
 </script>
 
-<div class="factory-tile bg-red-300 w-[400px] h-[400px] flex justify-center items-center">
-	<div class="tiles flex jusitfy-center align-center gap-1">
+<div class="factory-tile flex h-[400px] w-[400px] items-center justify-center bg-red-300">
+	<div class="tiles jusitfy-center align-center flex gap-1">
 		{#each $azulStore.tiles as tile}
 			<Tile {tile} />
 		{/each}
