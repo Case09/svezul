@@ -1,5 +1,4 @@
-import { tiles, type TileColor } from '$lib';
-import { shuffle, take, drop } from 'lodash';
+import type { TileColor } from '$lib';
 import { writable } from 'svelte/store';
 
 interface AzulStore {
@@ -7,24 +6,11 @@ interface AzulStore {
 	tiles: TileColor[];
 }
 
-const numberOfTilesOfEachColor = 20;
-const initialBag: TileColor[] = shuffle(
-	Array(numberOfTilesOfEachColor)
-		.fill([...tiles])
-		.flat()
-);
-
-function takeTilesFrom(tiles: TileColor[]): [TileColor[], TileColor[]] {
-	const taken = take(tiles, 4);
-	const remaining = drop(tiles, 4);
-	return [taken, remaining];
-}
-
-const [initialTiles, bag] = takeTilesFrom(initialBag);
+export const numberOfTilesOfEachColor = 20;
 
 const azulStore = writable(<AzulStore>{
-	bag,
-	tiles: initialTiles
+	bag: [],
+	tiles: []
 });
 
 export default azulStore;
