@@ -14,7 +14,7 @@ export const azulColors: Record<TileColor, string> = {
 };
 
 export function pickTile(tile: TileColor) {
-  const azulStoreValue = get(azulStore);
-  const points = azulStoreValue.tiles.filter(t => t === tile).length;
-  azulStore.update(s => ({...s, score: s.score + points}));
+	const azulStoreValue = get(azulStore);
+	const points = azulStoreValue.tiles.filter((t) => t === tile).length;
+	azulStore.update((s) => ({ ...s, score: s.score + points }));
 }

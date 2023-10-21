@@ -1,7 +1,6 @@
 <script lang="ts">
 	import azulStore from '$lib/stores/index';
 	import Tile from './Tile.svelte';
-
 </script>
 
 <div class="factory-tile flex h-[400px] w-[400px] items-center justify-center bg-red-300">
