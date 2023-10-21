@@ -22,7 +22,7 @@
 </script>
 
 <div class="h-screen w-screen p-2">
-	{#if $azulStore.bag.length}
+	{#if $azulStore.bag.length && !$azulStore.gameOver}
 		<h1>Tiles in bag: {$azulStore.bag.length}</h1>
 		<h1>Score: {$azulStore.score}</h1>
 	{/if}

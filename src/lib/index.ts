@@ -27,6 +27,7 @@ export function pickTile(tile: TileColor) {
 	azulStore.update((s) => ({
 		bag,
 		tiles: newTiles,
-		score: s.score + points
+		score: s.score + points,
+		gameOver: !bag.length
 	}));
 }
